@@ -1,0 +1,42 @@
+
+
+<div class="container-fluid bckgrnd">
+  <div class="row">
+    <div class="col-md-6 txtaln">
+        <h3 class="register-heading">Registration Form</h3>
+      <form  #signupform="ngForm" (ngSubmit)="register(signupform)" >
+      <div class="form-group">
+        <input type="text" class="form-control" name="uname" id="uname" [(ngModel)]="user.uname" placeholder="Username">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" name="fname" id="fname" [(ngModel)]="user.fname" placeholder="Firstname">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" name='lname' id="lname" [(ngModel)]="user.lname" placeholder="Lastname">
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" name="email" id="email" [(ngModel)]="user.email" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <input type="number" class="form-control" name="phone" id="phone" [(ngModel)]="user.phone" placeholder="Phone">
+      </div>
+      <div class="form-group">
+          <textarea class="form-control" rows="5" name="address1" id="address1" [(ngModel)]="user.address1" placeholder="Address1"></textarea>
+      </div>
+      <div class="form-group">
+          <textarea class="form-control" rows="5" name="address2" id="address2" [(ngModel)]="user.address2" placeholder="Address2"></textarea>
+      </div>
+      <div class="form-group">
+          <input type="file"  id="pic" name="pic" accept="/image/*" (change)="filetoupload($event)" >
+      </div>
+      <div>
+        <input class="btn btn-primary" type="submit" value="SIGNUP">
+    </div>
+    </form>
+    </div>
+  </div>
+</div>
+
+
+<img src={{heropic}} alt="" height="400px" width="400px"/>
+<router-outlet></router-outlet>
