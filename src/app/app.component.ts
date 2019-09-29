@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   }
 
 user = {
-  uname:'',
+  uname:null,
   fname:'',
   lname:'',
   email:'',
